@@ -1,0 +1,129 @@
+.productDiv {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-feature-settings: "lnum";
+
+}
+
+.postImg {
+  width: 323px;
+  height: 232px;
+
+}
+
+.postDiv {
+  margin: 10px;
+}
+
+.articleDiv {
+  @media screen and (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.richContent {
+  font-size: .8125rem;
+  color: #3d3636;
+  padding: 0;
+  margin: 0;
+}
+
+li:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #3d3636;
+  left: 0;
+  top: 10px;
+}
+
+li {
+  list-style-type: none;
+  text-align: -webkit-match-parent;
+  font-size: .8125rem;
+  color: #3d3636;
+  margin: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+ul {
+  margin: 0;
+
+}
+
+h3 {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+.bold{
+  list-style-type: none;
+  padding: 0;
+  color:black;
+  display: inline;
+}
+.boldP{
+  position: relative;
+  right: 20px;
+  float: right;
+  font-size: 22px;
+}
+
+
+@mixin prefix-keyframes($name, $options: [webkit moz o ms]) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @each $option in $options {
+    @if $option == webkit {
+      @-webkit-keyframes #{$name} {
+        @content;
+      }
+    }
+    @else if $option == moz {
+      @-moz-keyframes #{$name} {
+        @content;
+      }
+    }
+    @else if $option == o {
+      @-o-keyframes #{$name} {
+        @content;
+      }
+    }
+    @else if $option == ms {
+      @-ms-keyframes #{$name} {
+        @content;
+      }
+    }
+  }
+}
+
+@include prefix-keyframes(aniChange) {
+  100% {-webkit-transform: rotate(90deg);}
+};
+
+.ani{
+  animation:aniChange 1s infinite;
+  -webkit-animation:aniChange 1s infinite;
+
+}

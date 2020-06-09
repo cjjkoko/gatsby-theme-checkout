@@ -1,0 +1,51 @@
+@import 'vendor.scss';
+
+
+$blue: #056ef0;
+
+@media (min-width: 50rem) {
+  .test {
+    font-size: 40px;
+    color: $blue;
+  }
+}
+
+.potato {
+  color: white;
+}
+
+#superfun {
+  @extend .potato;
+}
+
+
+@mixin twitter {
+  width: 20px;
+}
+
+@mixin youtube {
+  width: 30px;
+}
+
+$color: red;
+a {
+  color: $color;
+  $color: white;
+  color: $color;
+
+  b {
+    color: $color;
+    $color: blue;
+    color: $color;
+  }
+
+  color: $color;
+}
+
+/*@define-function rem($val) {
+    @return $val / 640 * 10 * 1rem;
+}
+@callFn .foo {
+    !* Input example *!
+    height: rem(640);
+}*/

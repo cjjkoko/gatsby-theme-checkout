@@ -1,0 +1,15 @@
+{
+  "2001": "checkOut_skuError",
+
+  "100000": "system_error",
+
+  "120000": "checkout_error",
+  "120003":"checkout_noStock",
+  "120004": "checkout_noAvailable",
+  "120005":"checkout_missingData",
+  "120001": "validation_global_systemError",
+  "120002":"addCart_missingData",
+  "120006": "checkout_skuError",
+
+  "121000": "cart_error"
+}

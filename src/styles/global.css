@@ -1,0 +1,22 @@
+html {
+    background-color: white;
+}
+p {
+    color: maroon;
+}
+/*portrait*/
+@media screen and (max-aspect-ratio: 13/9){
+    html {font-size:calc(100vw / 750 * 100);}
+    @media screen and (min-width: 750px) {
+        html{font-size:100px;max-width:750px;}
+    }
+}
+/*landscape*/
+@media screen and (min-aspect-ratio: 13/9) {
+    html {font-size:calc(100vmax / 750 * 100);}
+    html .lockScreenTip {display:block;}
+    html.input_focus .lockScreenTip {display:none;}
+    @media screen and (min-width: 750px) {
+        html{font-size:100px;max-width:750px;}
+    }
+}
